@@ -1,0 +1,31 @@
+*{
+    box-sizing:border-box;
+    }
+    .modalBefore{
+        padding:10px
+    }
+    
+    .modal{
+        background-color:red;
+        padding:10px;
+    }
+    
+    .modal > h1 {
+        color:white;
+    }
+    
+    .modal > h3 {
+        color:white
+    }
+    .bodyBefore{
+        padding:20px;
+    }
+    
+    .body{
+        background-color:blue;
+        padding: 20px;
+    }
+    
+    .body > h1 {
+        color:white;
+    }
