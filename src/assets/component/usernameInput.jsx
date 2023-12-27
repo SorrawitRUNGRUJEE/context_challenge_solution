@@ -1,9 +1,12 @@
-export default function UsernameInput({
+import { useContext } from "react";
+import { InputContext } from "../context/inputContext";
+export default function UsernameInput() {
+  const {
     setUserName,
     username,
     usernameColor,
     errorUserName,
-  }) {
+  } =useContext(InputContext)
     return (
       <div className="form-input">
         <label>username</label>

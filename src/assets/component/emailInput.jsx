@@ -1,4 +1,7 @@
-export default function EmailInput({ email, emailColor, setEmail, errorEmail }) {
+import { useContext } from "react";
+import { InputContext } from "../context/inputContext"; 
+export default function EmailInput() {
+  const { email, emailColor, setEmail, errorEmail } = useContext(InputContext)
     return (
       <div className="form-input">
         <label>email</label>
