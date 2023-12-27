@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import ConfirmPasswordInput from "./assets/confirmPassword";
+import EmailInput from "./assets/emailInput";
+import PasswordInput from "./assets/passwordInput";
+import UsernameInput from "./assets/usernameInput";
 
 // Form Component
 function Form() {
@@ -95,76 +99,6 @@ function Form() {
 
         <button type="submit">Register</button>
       </form>
-    </div>
-  );
-}
-
-function UsernameInput({
-  setUserName,
-  username,
-  usernameColor,
-  errorUserName,
-}) {
-  return (
-    <div className="form-input">
-      <label>username</label>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUserName(e.target.value)}
-        style={{ borderColor: usernameColor }}
-      />
-      <small style={{ color: usernameColor }}>{errorUserName}</small>
-    </div>
-  );
-}
-
-function EmailInput({ email, emailColor, setEmail, errorEmail }) {
-  return (
-    <div className="form-input">
-      <label>email</label>
-      <input
-        type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        style={{ borderColor: emailColor }}
-      />
-      <small style={{ color: emailColor }}>{errorEmail}</small>
-    </div>
-  );
-}
-
-function PasswordInput({ password, setPassword, errorPassword,passwordColor }) {
-  return (
-    <div className="form-input">
-      <label>password</label>
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        style={{borderColor:passwordColor}}
-      />
-      <small style={{color:passwordColor}}>{errorPassword}</small>
-    </div>
-  );
-}
-
-function ConfirmPasswordInput({
-  confirmPassword,
-  setConfirmPassword,
-  errorConfirmPassword,
-  confirmPasswordColor
-}) {
-  return (
-    <div className="form-input">
-      <label>confirm-password</label>
-      <input
-        type="password"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-        style={{borderColor:confirmPasswordColor}}
-      />
-      <small style={{color:confirmPasswordColor}}>{errorConfirmPassword}</small>
     </div>
   );
 }
