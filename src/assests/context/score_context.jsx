@@ -1,4 +1,4 @@
-import { createContext,useState,useEffect } from "react";
+import { createContext,useState,useEffect,useContext } from "react";
 
 export const ScoreContext = createContext()
 
@@ -60,6 +60,17 @@ export default function ScoreContextProvider({children}){
     return <ScoreContext.Provider value={value}>
         {children}
     </ScoreContext.Provider>
+}
+
+export const useScore = () =>{
+    const context = useContext(ScoreContext)
+    if(!context){
+        throw new Error("useScore must be used within a ScoreContextProvider");
+    }
+
+    return context
+    
+    
 }
 
 

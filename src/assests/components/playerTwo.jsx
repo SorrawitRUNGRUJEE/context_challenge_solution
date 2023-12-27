@@ -1,7 +1,7 @@
 import { ScoreContext } from "../context/score_context";
-import { useContext } from "react";
+import { useScore } from "../context/score_context";
 export default function PlayerTwo () {
-    const {player,increment,decrement,scoreTwo} = useContext(ScoreContext)
+    const {player,increment,decrement,scoreTwo} = useScore()
     return (
       <div className="player">
         <span> this is {player.two}</span>
