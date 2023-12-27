@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
+import ScoreCard from "./assests/components/scoreCard";
+import PlayerOne from "./assests/components/playerOne";
+import PlayerTwo from "./assests/components/playerTwo";
+import PlayerThree from "./assests/components/playerThree";
+import PlayerFour from "./assests/components/playerFour";
 
 function App() {
   const [scoreOne,setScoreOne] = useState(0)
@@ -31,67 +35,11 @@ TotalScore(scoreOne,scoreTwo,scoreThree,scoreFour)
     </ScoreCard>
   );
 }
-const ScoreCard = ({ children,total }) => {
-  return (
-    <div className="player">
-      <span>this is overall score: {total}</span>
-      {children}
-    </div>
-  );
-};
 
-const PlayerOne = ({ name,increment,decrement,score }) => {
-  return (
-    <div className="player">
-      <span> this is {name}</span>
-      <span>this is {name}'s score :{score}</span>
-      <div>
-      <button onClick={increment}> plus</button>
-      <button onClick={decrement}> minus</button>
-      </div>
+ 
 
-    </div>
-  );
-};
-const PlayerTwo = ({ name,increment,decrement,score }) => {
-  return (
-    <div className="player">
-      <span> this is {name}</span>
-      <span>this is {name}'s score :{score}</span>
-      <div>
-      <button onClick={increment}> plus</button>
-      <button onClick={decrement}> minus</button>
-      </div>
 
-    </div>
-  );
-};
-const PlayerThree = ({ name,increment,decrement,score }) => {
-  return (
-    <div className="player">
-      <span> this is {name}</span>
-      <span>this is {name}'s score :{score}</span>
-      <div>
-      <button onClick={increment}> plus</button>
-      <button onClick={decrement}> minus</button>
-      </div>
 
-    </div>
-  );
-};
-const PlayerFour = ({ name,increment,decrement,score }) => {
-  return (
-    <div className="player">
-      <span> this is {name}</span>
-      <span>this is {name}'s score :{score}</span>
-      <div>
-      <button onClick={increment}> plus</button>
-      <button onClick={decrement}> minus</button>
-      </div>
-
-    </div>
-  );
-};
 
 export default App;
 
