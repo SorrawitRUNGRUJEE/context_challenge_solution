@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import ConfirmPasswordInput from "./assets/confirmPassword";
-import EmailInput from "./assets/emailInput";
-import PasswordInput from "./assets/passwordInput";
-import UsernameInput from "./assets/usernameInput";
+import ConfirmPasswordInput from "./assets/component/confirmPassword";
+import EmailInput from "./assets/component/emailInput";
+import PasswordInput from "./assets/component/passwordInput";
+import UsernameInput from "./assets/component/usernameInput";
+import InputContextProvider from "./assets/context/inputContext";
 
 // Form Component
 function Form() {
@@ -104,4 +105,10 @@ function Form() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Form />);
+root.render(
+<>
+<InputContextProvider>
+<Form />
+</InputContextProvider>
+</>
+);
