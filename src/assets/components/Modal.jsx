@@ -1,7 +1,6 @@
-import { useContext } from "react"
-import { ModalContext } from "../context/modalContext"
+import { useModal } from "../context/modalContext"
 export default function Modal ({content}) {
-    const {color,modal_content} = useContext(ModalContext)
+    const {color,modal_content} = useModal()
   
   
     return(

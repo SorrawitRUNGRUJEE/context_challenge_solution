@@ -1,9 +1,7 @@
 import Modal  from "./Modal"
-import { useContext } from "react"
-import { ModalContext } from "../context/modalContext"
-
+import { useModal } from "../context/modalContext"
 export default function Body ({title,content})  {
-    const {bodyColor,isModalOpen,isBodyOpen} = useContext(ModalContext)
+    const {bodyColor,isModalOpen,isBodyOpen} = useModal()
     return(
   <>{
     isBodyOpen &&

@@ -1,7 +1,6 @@
-import { useContext } from "react"
-import { ModalContext } from "../context/modalContext"
+import { useModal } from "../context/modalContext"
 export default function Button  () {
-    const {setBody,setBodyColors,setModal,setColors} = useContext(ModalContext)
+    const {setBody,setBodyColors,setModal,setColors} = useModal()
     return(
       <div>
           <button onClick={setBody}>trigger Body</button>
