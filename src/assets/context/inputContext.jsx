@@ -1,4 +1,4 @@
-import { createContext,useState } from "react";
+import { createContext,useState,useContext } from "react";
 
 export const InputContext = createContext()
 
@@ -68,6 +68,18 @@ export default function InputContextProvider({children}){
     return <InputContext.Provider value={value}>
         {children}
     </InputContext.Provider>
+}
+
+
+export const useInput = () =>{
+    const context = useContext(InputContext)
+    if(!context){
+        throw new Error("useScore must be used within a ScoreContextProvider");
+    }
+
+    return context
+    
+    
 }
 
 

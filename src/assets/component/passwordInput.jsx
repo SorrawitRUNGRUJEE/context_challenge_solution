@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { InputContext } from "../context/inputContext";
+import { useInput } from "../context/inputContext";
 
 export default function PasswordInput() {
-  const { password, setPassword, errorPassword,passwordColor } = useContext(InputContext)
+  const { password, setPassword, errorPassword,passwordColor } = useInput()
     return (
       <div className="form-input">
         <label>password</label>
