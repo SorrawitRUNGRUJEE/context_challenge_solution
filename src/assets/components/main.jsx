@@ -3,11 +3,11 @@ import Posts from "./posts";
 
 
 
-export default function Main({ posts, onAddPost }) {
+export default function Main() {
     return (
       <main>
-        <FormAddPost onAddPost={onAddPost} />
-        <Posts posts={posts} />
+        <FormAddPost  />
+        <Posts  />
       </main>
     );
   }

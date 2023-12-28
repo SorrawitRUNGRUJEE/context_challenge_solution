@@ -1,8 +1,8 @@
 import List from "./list";
-export default function Posts({ posts }) {
+export default function Posts() {
     return (
       <section>
-        <List posts={posts} />
+        <List  />
       </section>
     );
   }
